@@ -19,22 +19,22 @@ knapsack/
 ```
 
 ## Compilação e Execução
-Para compilar e executar o programa que gera os arquivos de entrada, use:
+1. Para compilar e executar o programa que gera os arquivos de entrada, use:
 ```sh
 make generate-inputs
 ```
 
-Para compilar o projeto, use:
+2. Para compilar o projeto, use:
 ```sh
 make
 ```
 
-Para executar o programa, use:
+3. Para executar o programa, use:
 ```sh
 make run
 ```
 
-Para limpar os arquivos compilados, use:
+4. Para limpar os arquivos compilados, use:
 ```sh
 make clean
 ```
