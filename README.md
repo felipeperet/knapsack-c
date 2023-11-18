@@ -19,14 +19,14 @@ knapsack/
 ```
 
 ## Compilação e Execução
-1. Para compilar e executar o programa que gera os arquivos de entrada, use:
-```sh
-make generate-inputs
-```
-
-2. Para compilar o projeto, use:
+1. Para compilar o projeto, use:
 ```sh
 make
+```
+
+2. Para executar o programa que gera os arquivos de entrada, use:
+```sh
+make generate-inputs
 ```
 
 3. Para executar o programa, use:
