@@ -6,6 +6,7 @@ abordagens diferentes para resolver o Problema da Mochila 0-1: programação
 dinâmica, backtracking e branch-and-bound.
 
 ## Estrutura do Projeto
+``` bash
 knapsack/
 ├── bin/       - Executáveis compilados
 ├── src/       - Códigos fonte dos algoritmos
@@ -15,6 +16,7 @@ knapsack/
 ├── Makefile   - Script para automatizar a compilação
 ├── LICENSE.md - Script para automatizar a compilação
 └── README.md  - Informações e instruções sobre o projeto
+```
 
 ## Compilação e Execução
 Para compilar o projeto, use:
