@@ -19,22 +19,40 @@ knapsack/
 ```
 
 ## Compilação e Execução
-1. Para compilar o projeto, use:
+Para realizar a compilação e execução do projeto, siga os passos abaixo:
+
+1. **Compilar o Projeto**
+Utilize o comando abaixo para compilar o projeto:
 ```sh
 make
 ```
 
-2. Para executar o programa que gera os arquivos de entrada, use:
+2. **Gerar Arquivos de Entrada**
+Para executar o programa que gera os arquivos de entrada, utilize:
 ```sh
 make generate-inputs
 ```
 
-3. Para executar o programa, use:
+3. **Executar o Programa Principal**
+Para executar o programa principal, use o comando:
 ```sh
 make run
 ```
+Após a execução, um prompt no terminal solicitará a escolha do algoritmo 
+(programação dinâmica, branch and bound ou backtracking) para processar as 
+instâncias que foram geradas anteriormente
 
-4. Para limpar os arquivos compilados, use:
+4. **Executar Análise dos Resultados**
+Para realizar a análise dos resultados, execute:
+```sh
+make analysis
+```
+Este comando processará os arquivos de saída localizados em /data/outputs e 
+gerará uma análise gráfica comparando a complexidade de tempo de execução de 
+cada algoritmo. Os gráficos serão salvos no diretório /data/plots.
+
+5. **Limpar Arquivos Compilados**
+Para remover os arquivos compilados e limpar o diretório, use:
 ```sh
 make clean
 ```
