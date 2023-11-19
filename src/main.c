@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <sys/time.h>
 #include <time.h>
 
 #include "../include/backtracking.h"
@@ -119,7 +120,9 @@ void process_files_in_order(FileEntry *entries, int count,
 
         fclose(input_file);
 
-        clock_t start = clock();
+        struct timeval start, end;
+        gettimeofday(&start, NULL);
+
         int max_profit = 0;
         if (strcmp(algorithm_name, "dynamic") == 0) {
             max_profit = knapsack_dynamic(W, weights, values, n);
@@ -128,8 +131,12 @@ void process_files_in_order(FileEntry *entries, int count,
         } else if (strcmp(algorithm_name, "branch_and_bound") == 0) {
             max_profit = knapsack_branch_and_bound(W, items, n);
         }
-        clock_t end = clock();
-        double cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+        gettimeofday(&end, NULL);
+
+        double time_taken;
+        time_taken = (end.tv_sec - start.tv_sec) * 1e6;
+        time_taken = (time_taken + (end.tv_usec - start.tv_usec)) * 1e-6;
 
         FILE *output_file = fopen(output_filepath, "w");
         if (output_file == NULL) {
@@ -141,8 +148,8 @@ void process_files_in_order(FileEntry *entries, int count,
         }
 
         fprintf(output_file,
-                "Lucro máximo: %d\nTempo de execução: %.2f segundos\n",
-                max_profit, cpu_time_used);
+                "Lucro máximo: %d\nTempo de execução: %.6f segundos\n",
+                max_profit, time_taken);
         fclose(output_file);
 
         free(weights);

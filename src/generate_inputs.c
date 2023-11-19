@@ -58,8 +58,8 @@ int main() {
     create_directory(input_folder);
     create_directory(output_folder);
 
-    // Gerar 20 instâncias com n variando
-    for (int n = 100, i = 1; i <= 20; n *= 2, ++i) {
+    // Gerar 22 instâncias com n variando
+    for (int n = 25, i = 1; i <= 22; n *= 2, ++i) {
         char filename[50];
         sprintf(filename, "input-%d-n.txt", n);
         generate_instance(input_folder, filename, n, 100);
