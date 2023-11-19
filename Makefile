@@ -43,3 +43,8 @@ clean:
 .PHONY: run
 run:
 	@$(EXE)
+
+# Alvo para executar o script de análise
+.PHONY: analysis
+analysis:
+	python3 analysis.py
